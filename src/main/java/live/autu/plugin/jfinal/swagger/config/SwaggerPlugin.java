@@ -36,12 +36,10 @@ public class SwaggerPlugin implements IPlugin {
 
 	private static SwaggerDoc doc;
 
-	private String configPath = "swagger.txt";
-
 	private Prop p;
 
 	private Prop loadProp() {
-		p = PropKit.use(configPath);
+		p = PropKit.appendIfExists(SwaggerConstant.configPath);
 		return p;
 	}
 
@@ -56,7 +54,7 @@ public class SwaggerPlugin implements IPlugin {
 
 	public SwaggerPlugin(String configPath) {
 		super();
-		this.configPath = configPath;
+		SwaggerConstant.configPath = configPath;
 	}
 
 	public static SwaggerDoc getDoc() {
@@ -64,11 +62,11 @@ public class SwaggerPlugin implements IPlugin {
 	}
 
 	public static String getDocApiPath() {
-		return SwaggerContant.docApiPath;
+		return SwaggerConstant.docApiPath;
 	}
 
 	public static void setDocApiPath(String docApiPath) {
-		SwaggerContant.docApiPath = docApiPath;
+		SwaggerConstant.docApiPath = docApiPath;
 	}
 
 	@Override
@@ -175,7 +173,7 @@ public class SwaggerPlugin implements IPlugin {
 		ApiOperation apiOperation = (ApiOperation) method.getAnnotation(ApiOperation.class);
 
 		if (apiOperation == null) {
-			apiOperation = SwaggerContant.defaultApiOperation;
+			apiOperation = SwaggerConstant.defaultApiOperation;
 		}
 		return apiOperation;
 	}
@@ -334,7 +332,8 @@ public class SwaggerPlugin implements IPlugin {
 		return getMethodMap(requestMethods, apiMethod, method.getName());
 	}
 
-	private Map<String, SwaggerApiMethod> getMethodMap(RequestMethod[] methods, SwaggerApiMethod apiMethod, String methodName) {
+	private Map<String, SwaggerApiMethod> getMethodMap(RequestMethod[] methods, SwaggerApiMethod apiMethod,
+			String methodName) {
 
 		Map<String, SwaggerApiMethod> methodMap = new HashMap<>();
 

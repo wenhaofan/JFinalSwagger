@@ -8,12 +8,14 @@ import live.autu.plugin.jfinal.swagger.annotation.ApiOperation;
 * @author 作者:范文皓
 * @createDate 创建时间：2019年3月1日-上午9:58:01 
 */
-public class SwaggerContant {
+public class SwaggerConstant {
 	
 	/**
 	 * swagger api访问路径
 	 */
 	public static String docApiPath;
+	
+	public static String configPath="swagger.txt";
 	
 	public static ApiOperation defaultApiOperation = new ApiOperation() {
 

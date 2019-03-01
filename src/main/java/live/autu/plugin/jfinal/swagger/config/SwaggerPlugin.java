@@ -23,7 +23,7 @@ import live.autu.plugin.jfinal.swagger.annotation.ApiImplicitParam;
 import live.autu.plugin.jfinal.swagger.annotation.ApiImplicitParams;
 import live.autu.plugin.jfinal.swagger.annotation.ApiOperation;
 import live.autu.plugin.jfinal.swagger.annotation.ApiParam;
-import live.autu.plugin.jfinal.swagger.model.SwaggerApi;
+import live.autu.plugin.jfinal.swagger.model.SwaggerApiInfo;
 import live.autu.plugin.jfinal.swagger.model.SwaggerApiMethod;
 import live.autu.plugin.jfinal.swagger.model.SwaggerParameter;
 import live.autu.plugin.jfinal.swagger.model.SwaggerDoc;
@@ -166,7 +166,7 @@ public class SwaggerPlugin implements IPlugin {
 		}
 
 		if (doc.getInfo() == null) {
-			SwaggerApi apiInfo = loadConfigApiInfo();
+			SwaggerApiInfo apiInfo = loadConfigApiInfo();
 			doc.setInfo(apiInfo);
 		}
 	}
@@ -353,13 +353,13 @@ public class SwaggerPlugin implements IPlugin {
 		return methodMap;
 	}
 
-	private SwaggerApi loadConfigApiInfo() {
+	private SwaggerApiInfo loadConfigApiInfo() {
 		String infoDescription = p.get("info.description");
 		String infoVersion = p.get("info.version");
 		String infoTitle = p.get("info.title");
 		String infoTermsOfService = p.get("info.termsOfService");
 
-		SwaggerApi apiInfo = new SwaggerApi(infoDescription, infoVersion, infoTitle, infoTermsOfService);
+		SwaggerApiInfo apiInfo = new SwaggerApiInfo(infoDescription, infoVersion, infoTitle, infoTermsOfService);
 		return apiInfo;
 	}
 

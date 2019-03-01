@@ -14,7 +14,7 @@ public class SwaggerDoc {
 	 */
 	private String swagger;
 
-	private SwaggerApi info;
+	private SwaggerApiInfo info;
 
 	private String host;
 
@@ -43,48 +43,54 @@ public class SwaggerDoc {
 		return swagger;
 	}
 
-	public void setSwagger(String swagger) {
+	public SwaggerDoc setSwagger(String swagger) {
 		this.swagger = swagger;
+		return this;
 	}
 
-	public SwaggerApi getInfo() {
+	public SwaggerApiInfo getInfo() {
 		return info;
 	}
 
-	public void setInfo(SwaggerApi info) {
+	public SwaggerDoc setInfo(SwaggerApiInfo info) {
 		this.info = info;
+		return this;
 	}
 
 	public String getHost() {
 		return host;
 	}
 
-	public void setHost(String host) {
+	public SwaggerDoc setHost(String host) {
 		this.host = host;
+		return this;
 	}
 
 	public String getBasePath() {
 		return basePath;
 	}
 
-	public void setBasePath(String basePath) {
+	public SwaggerDoc setBasePath(String basePath) {
 		this.basePath = basePath;
+		return this;
 	}
 
 	public List<String> getSchemes() {
 		return schemes;
 	}
 
-	public void setSchemes(List<String> schemes) {
+	public SwaggerDoc setSchemes(List<String> schemes) {
 		this.schemes = schemes;
+		return this;
 	}
 
 	public Map<String, Map<String, SwaggerApiMethod>> getPaths() {
 		return paths;
 	}
 
-	public void setPaths(Map<String, Map<String, SwaggerApiMethod>> paths) {
+	public SwaggerDoc setPaths(Map<String, Map<String, SwaggerApiMethod>> paths) {
 		this.paths = paths;
+		return this;
 	}
 
 	public SwaggerDoc addScheme(String scheme) {

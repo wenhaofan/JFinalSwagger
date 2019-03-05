@@ -70,10 +70,7 @@
   info.title=测试
   
 ```
-  修改undertow.txt
-```
-  添加  undertow.hotSwapClassPrefix=live.autu.plugin.jfinal.swagger
-```
+
   喜欢代码配置也可以使用代码配置
 ```  
  @Override
@@ -82,6 +79,10 @@
 				.setInfo(new SwaggerApiInfo("jfinal swagger demo", "1.0", "jfinal swagger", ""))));
 	}
  ```
+   修改undertow.txt
+```
+  添加  undertow.hotSwapClassPrefix=live.autu.plugin.jfinal.swagger
+```
 **5. 添加注解**
 
 ```

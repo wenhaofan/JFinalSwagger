@@ -1,5 +1,5 @@
 ### JFinalSwagger使用说明 
-
+demo:[https://gitee.com/wenhaofan/JFinalSwaggerDemo](https://gitee.com/wenhaofan/JFinalSwaggerDemo)
 **1. 引入**
 ```
     <dependency>
@@ -9,7 +9,7 @@
     </dependency>
 ```
 
-**2. 前往：https://github.com/swagger-api/swagger-ui 下载 swagger-ui-master 将 dist 中文件加入到项目中**
+**2. 前往：[https://github.com/swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui) 下载 swagger-ui-master 将 dist 中文件加入到项目中**
 
 ```
 可配置成类似如下路径：

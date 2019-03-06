@@ -1,5 +1,6 @@
 ### JFinalSwagger使用说明 
 demo:[https://gitee.com/wenhaofan/JFinalSwaggerDemo](https://gitee.com/wenhaofan/JFinalSwaggerDemo)
+
 **1. 引入**
 ```
     <dependency>
